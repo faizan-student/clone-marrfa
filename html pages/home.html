@@ -6,37 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Real Estate Landing Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="home-style.css">
+    <link rel="stylesheet" href="/css files/home-style.css">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 
 </head>
 
 <body>
+    <div class="background-grid"></div>
+    <div class="tech-light"></div>
 
-    <!-- Navbar -->
+
+    <!-- Hamburger Button - Visible Only on Mobile -->
+    <button class="sidebar-toggle-btn navbar-toggler" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Desktop Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
         <div class="container glass">
-            <a class="navbar-brand" href="#"><img
-                    src="https://cdn.prod.website-files.com/6736760549abb9514e976ad5/673ed8e4ea869941b69f77e1_logo1-07%20(1)%20(1)-p-2000.png"
-                    alt="MARRFA" height="40" /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="#">
+                <img src="https://cdn.prod.website-files.com/6736760549abb9514e976ad5/673ed8e4ea869941b69f77e1_logo1-07%20(1)%20(1)-p-2000.png"
+                    alt="MARRFA" height="40" />
+            </a>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Search Property</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Finance</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Partnership</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/html pages/home.html">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html pages/projects.html">
+                            <i class="fas fa-solid fa-building"></i> Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html pages/search-property.html">
+                            <i class="fas fa-search"></i> Search Property
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html pages/finance.html">
+                            <i class="fas fa-chart-line"></i> Finance
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html pages/about-us.html">
+                            <i class="fas fa-info-circle"></i> About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html pages/blogs.html">
+                            <i class="fas fa-blog"></i> Blogs
+                        </a>
+                    </li>
                 </ul>
+
             </div>
             <button class="callback-btn"><span>Request Callback</span></button>
         </div>
     </nav>
+
+    <!-- Sidebar (Only on Mobile) -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <div class="sidebar-header">
+            <span class="close-btn" onclick="closeSidebar()">×</span>
+        </div>
+        <ul>
+            <li class="nav-item"><a class="nav-link active" href="/html pages/home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/html pages/projects.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="/html pages/search-property.html">Search Property</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="/html pages/finance.html">Finance</a></li>
+            <li class="nav-item"><a class="nav-link" href="/html pages/about-us.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="/html pages/blogs.html">Blogs</a></li>
+        </ul>
+    </div>
+
+
+
 
 
 
@@ -54,8 +104,8 @@
 
             <!-- Hero Image -->
             <div class="hero-image">
-                <img class="hero-img active" src="re1.png" alt="Real Estate Property" />
-                <img class="hero-img" src="re1.png" alt="Property" />
+                <img class="hero-img active" src="/images/re1.png" alt="Real Estate Property" />
+                <img class="hero-img" src="/images/re1.png" alt="Property" />
             </div>
         </div>
 
@@ -63,7 +113,7 @@
 
 
 
-    <section class="partners partners-glass text-center">
+    <section class="partners text-center">
         <div class="container">
             <h3>Our Trusted Partners</h3>
             <div class="slider-wrapper">
@@ -206,7 +256,7 @@
             <div class="marrfa-carousel-viewport">
                 <div class="marrfa-carousel-track">
                     <div class="marrfa-slide">
-                        <img src="re1.png" alt="Slide 1">
+                        <img src="/images/re1.png" alt="Slide 1">
                         <div class="marrfa-slide-content">
                             <p class="marrfa-date">27th November, 2024</p>
                             <h3 class="marrfa-heading">Thorough due diligence process.</h3>
@@ -216,7 +266,7 @@
                     </div>
 
                     <div class="marrfa-slide">
-                        <img src="re2-Photoroom.png" alt="Slide 2">
+                        <img src="/images/re2-Photoroom.png" alt="Slide 2">
                         <div class="marrfa-slide-content">
                             <p class="marrfa-date">10th January, 2025</p>
                             <h3 class="marrfa-heading">Exceptional service throughout.</h3>
@@ -226,7 +276,7 @@
                     </div>
 
                     <div class="marrfa-slide">
-                        <img src="high-angle-pie-chart-with-cities.jpg" alt="Slide 3">
+                        <img src="/images/high-angle-pie-chart-with-cities.jpg" alt="Slide 3">
                         <div class="marrfa-slide-content">
                             <p class="marrfa-date">5th February, 2025</p>
                             <h3 class="marrfa-heading">Strong global insights.</h3>
@@ -264,7 +314,7 @@
                 <!-- Project Card 1 -->
                 <div class="trending-card">
                     <div class="trending-img-box">
-                        <img src="re1.png" alt="Samana Resorts" />
+                        <img src="/images/re1.png" alt="Samana Resorts" />
                         <div class="trending-badge">🏷️ Arrfa’s Choice</div>
                     </div>
                     <div class="trending-content">
@@ -285,7 +335,7 @@
                 <!-- Project Card 2 -->
                 <div class="trending-card">
                     <div class="trending-img-box">
-                        <img src="high-angle-pie-chart-with-cities.jpg" alt="W Residences" />
+                        <img src="/images/high-angle-pie-chart-with-cities.jpg" alt="W Residences" />
                         <div class="trending-badge">🏷️ Arrfa’s Choice</div>
                     </div>
                     <div class="trending-content">
@@ -306,7 +356,7 @@
                 <!-- Project Card 3 -->
                 <div class="trending-card">
                     <div class="trending-img-box">
-                        <img src="re2-Photoroom.png" alt="Vitalia" />
+                        <img src="/images/re2-Photoroom.png" alt="Vitalia" />
                         <div class="trending-badge">🏷️ Arrfa’s Choice</div>
                     </div>
                     <div class="trending-content">
@@ -338,7 +388,7 @@
             <div class="insightCards__card">
                 <div class="insightCards__imageWrapper">
                     <span class="insightCards__tag">News</span>
-                    <img src="re1.png" alt="Dubai Skyline">
+                    <img src="/images/re1.png" alt="Dubai Skyline">
                 </div>
                 <div class="insightCards__text">
                     <div class="insightCards__meta">
@@ -356,7 +406,7 @@
             <div class="insightCards__card">
                 <div class="insightCards__imageWrapper">
                     <span class="insightCards__tag">News</span>
-                    <img src="re2-Photoroom.png" alt="Dubai Investment">
+                    <img src="/images/re2-Photoroom.png" alt="Dubai Investment">
                 </div>
                 <div class="insightCards__text">
                     <div class="insightCards__meta">
@@ -374,7 +424,7 @@
             <div class="insightCards__card">
                 <div class="insightCards__imageWrapper">
                     <span class="insightCards__tag">News</span>
-                    <img src="re1.png" alt="International Property">
+                    <img src="/images/re1.png" alt="International Property">
                 </div>
                 <div class="insightCards__text">
                     <div class="insightCards__meta">
@@ -442,17 +492,17 @@
     <footer class="customFooter__section">
         <div class="customFooter__top">
             <div class="customFooter__column customFooter__logoCol">
-                <img src="logo.png" alt="Marrfa Logo" class="customFooter__logo" />
+                <img src="/images/logo.png" alt="Marrfa Logo" class="customFooter__logo" />
                 <p class="customFooter__desc">
                     Welcome on board with Marrfa, your ultimate platform for cross-border real estate investments!
                     Marrfa is your go-to hub for discovering, comparing, and investing in global properties, all in one
                     place. With Marrfa, investing in real estate worldwide has never been easier or more transparent.
                 </p>
                 <div class="customFooter__socialIcons">
-                    <a href="#"><img src="linkedin.svg" alt="LinkedIn" /></a>
-                    <a href="#"><img src="instagram.svg" alt="Instagram" /></a>
-                    <a href="#"><img src="x.svg" alt="Twitter/X" /></a>
-                    <a href="#"><img src="youtube.svg" alt="YouTube" /></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
 
@@ -644,7 +694,7 @@
     </script>
 
 
-    <!-- <script>
+    <script>
         gsap.registerPlugin(ScrollTrigger);
 
         // Investment Section Animation
@@ -774,175 +824,12 @@
         window.addEventListener("load", function () {
             ScrollTrigger.refresh();
         });
-    </script> -->
+    </script>
 
 
 
 
     <script>
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Investment Section Animation
-        gsap.from("#investment-section .investment-header h2", {
-            opacity: 0,
-            y: -50,
-            duration: 1,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: "#investment-section",
-                start: "top 80%",
-                toggleActions: "play none none reset"
-            }
-        });
-
-        gsap.from("#investment-section .investment-header p", {
-            opacity: 0,
-            y: 30,
-            duration: 1,
-            delay: 0.3,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: "#investment-section",
-                start: "top 80%",
-                toggleActions: "play none none reset"
-            }
-        });
-
-        gsap.from(".investment-card-left, .investment-card-middle, .investment-card-right", {
-            opacity: 0,
-            y: 50,
-            duration: 1,
-            stagger: 0.3,
-            ease: "back.out(1.7)",
-            scrollTrigger: {
-                trigger: ".investment-flow-container",
-                start: "top 80%",
-                toggleActions: "play none none reset"
-            }
-        });
-
-        // Property Card Animation
-        gsap.from(".property-card .property-info", {
-            x: -100,
-            opacity: 0,
-            duration: 1,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: ".property-card",
-                start: "top 85%",
-                toggleActions: "play none none reset"
-            }
-        });
-
-        gsap.from(".property-card .property-image", {
-            scale: 0.8,
-            opacity: 0,
-            duration: 1,
-            delay: 0.2,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: ".property-card",
-                start: "top 85%",
-                toggleActions: "play none none reset"
-            }
-        });
-
-        // Marrfa Success Carousel Animation
-        gsap.from(".marrfa-slide", {
-            x: 100,
-            opacity: 0,
-            duration: 1,
-            stagger: 0.3,
-            ease: "expo.out",
-            scrollTrigger: {
-                trigger: ".marrfa-carousel-track",
-                start: "top 80%",
-                toggleActions: "play none none reset"
-            }
-        });
-
-        // Trending Section Cards
-        gsap.utils.toArray(".trending-card").forEach((card, index) => {
-            gsap.from(card, {
-                opacity: 0,
-                y: 60,
-                duration: 1.2,
-                delay: index * 0.2,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: card,
-                    start: "top 90%",
-                    toggleActions: "play none none reset"
-                }
-            });
-        });
-
-        // Insights Cards
-        gsap.from(".insightCards__card", {
-            opacity: 0,
-            scale: 0.9,
-            duration: 1,
-            stagger: 0.2,
-            ease: "back.out(1.4)",
-            scrollTrigger: {
-                trigger: ".insightCards__grid",
-                start: "top 85%",
-                toggleActions: "play none none reset"
-            }
-        });
-
-        // Insight Section Heading
-        gsap.from(".insightCards__heading", {
-            y: -40,
-            opacity: 0,
-            duration: 1,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: ".insightCards__heading",
-                start: "top 90%",
-                toggleActions: "play none none reset"
-            }
-        });
-
-        // ✨ Cursor Hover Animation — Pure JS + GSAP
-        function gsapHover(selector) {
-            document.querySelectorAll(selector).forEach((el) => {
-                el.style.transformOrigin = "center center";
-                el.style.willChange = "transform";
-
-                el.addEventListener("mouseenter", () => {
-                    gsap.to(el, {
-                        scale: 1.05,
-                        boxShadow: "0 15px 30px rgba(0,0,0,0.15)",
-                        duration: 0.4,
-                        ease: "power3.out"
-                    });
-                });
-
-                el.addEventListener("mouseleave", () => {
-                    gsap.to(el, {
-                        scale: 1,
-                        boxShadow: "0px 0px 0px rgba(0,0,0,0)",
-                        duration: 0.3,
-                        ease: "power2.inOut"
-                    });
-                });
-            });
-        }
-
-        // Apply to elements
-        gsapHover(".investment-card-left, .investment-card-middle, .investment-card-right");
-        gsapHover(".property-card");
-        gsapHover(".trending-card");
-        gsapHover(".insightCards__card");
-
-        // Refresh triggers after DOM load
-        window.addEventListener("load", function () {
-            ScrollTrigger.refresh();
-        });
-
-
-
 
         // Create magnifier glass
         const magnifier = document.createElement("div");
@@ -1029,13 +916,38 @@
 
     </script>
 
+    <script>
+        const sidebar = document.getElementById("mobileSidebar");
+        const toggleBtn = document.querySelector(".sidebar-toggle-btn");
+
+        // Sidebar toggle button click event
+        toggleBtn.addEventListener("click", (event) => {
+            // Prevent click from propagating to the document
+            event.stopPropagation();
+            sidebar.classList.toggle("open");
+        });
+
+        // Close the sidebar if clicked outside
+        document.addEventListener("click", (event) => {
+            // Check if the click is outside of the sidebar and toggle button
+            if (!sidebar.contains(event.target) && !toggleBtn.contains(event.target)) {
+                sidebar.classList.remove("open");
+            }
+        });
+
+        // Prevent click event on the sidebar from propagating to the document
+        sidebar.addEventListener("click", (event) => {
+            event.stopPropagation();
+        });
+
+    </script>
 
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="application.js"></script>
-    <script src="object.js"></script>
+    <script src="/js files/application.js"></script>
+    <script src="/js files/object.js"></script>
 
 </body>
 
